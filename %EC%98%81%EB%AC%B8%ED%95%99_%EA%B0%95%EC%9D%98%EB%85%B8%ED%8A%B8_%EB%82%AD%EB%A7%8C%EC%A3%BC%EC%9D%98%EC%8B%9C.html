@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>영문학 강의노트 — 낭만주의 시</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f9f8f6; color: #1a1a1a; line-height: 1.7; }
+.wrap { max-width: 740px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.nav { display: flex; gap: 6px; flex-wrap: wrap; padding: 1rem 0 1.25rem; border-bottom: 0.5px solid #dedad3; margin-bottom: 1.5rem; }
+.nb { padding: 6px 14px; font-size: 13px; border: 0.5px solid #ccc; border-radius: 20px; background: transparent; color: #666; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.nb:hover { background: #f0eeea; color: #222; }
+.nb.on { background: #f0eeea; color: #111; border-color: #999; font-weight: 500; }
+.sec { display: none; } .sec.on { display: block; }
+.card { background: #fff; border: 0.5px solid #e5e2db; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.tag { display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 20px; margin: 2px 3px 2px 0; }
+.tp{background:#EEEDFE;color:#3C3489} .tt{background:#E1F5EE;color:#085041}
+.ta{background:#FAEEDA;color:#633806} .tc{background:#FAECE7;color:#712B13}
+.tb{background:#E6F1FB;color:#0C447C}
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+.mini { background: #f5f4f0; border-radius: 8px; padding: 0.9rem 1rem; }
+.mini-label { font-size: 11px; color: #aaa; margin-bottom: 4px; }
+.mini-val { font-size: 15px; font-weight: 500; color: #111; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 1rem; }
+.tbl th { text-align: left; padding: 8px 10px; font-weight: 500; font-size: 12px; color: #888; border-bottom: 0.5px solid #e5e2db; }
+.tbl td { padding: 8px 10px; color: #555; border-bottom: 0.5px solid #e5e2db; vertical-align: top; line-height: 1.6; }
+.tbl tr:last-child td { border-bottom: none; }
+.accent { color: #111; font-weight: 500; }
+.theme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+.theme-card { border-radius: 12px; padding: 1rem; }
+.quiz-q { font-size: 14px; font-weight: 500; margin-bottom: 12px; color: #111; line-height: 1.6; }
+.quiz-opt { display: block; width: 100%; text-align: left; padding: 10px 14px; margin-bottom: 6px; border: 0.5px solid #e5e2db; border-radius: 8px; background: transparent; font-size: 13px; color: #111; cursor: pointer; transition: background 0.12s; font-family: inherit; }
+.quiz-opt:hover { background: #f5f4f0; }
+.quiz-fb { font-size: 13px; padding: 10px 14px; border-radius: 8px; margin-top: 8px; line-height: 1.5; display: none; }
+.quiz-fb.show { display: block; }
+.quiz-fb.correct { background: #EAF3DE; color: #173404; }
+.quiz-fb.wrong { background: #FCEBEB; color: #501313; }
+h2 { font-size: 17px; font-weight: 500; color: #111; margin-bottom: 1rem; }
+h3 { font-size: 14px; font-weight: 500; color: #111; margin-bottom: 6px; }
+p, li { font-size: 13px; color: #555; line-height: 1.75; }
+ul { padding-left: 18px; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div style="padding:0.5rem 0 0">
+  <div style="font-size:11px;color:#aaa;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px">영국 낭만주의 문학 강의노트</div>
+  <div style="font-size:22px;font-weight:500;color:#111;margin-bottom:2px">시 형식 & 워즈워스 작품 분석</div>
+  <div style="font-size:13px;color:#888">Ballad · Blank Verse · 틴턴 수도원 · 수선화</div>
+</div>
+
+<nav class="nav">
+  <button class="nb on" onclick="show('form')">시 형식 정리</button>
+  <button class="nb" onclick="show('tintern')">틴턴 수도원 분석</button>
+  <button class="nb" onclick="show('daffodil')">수선화 분석</button>
+  <button class="nb" onclick="show('key')">핵심 개념</button>
+  <button class="nb" onclick="show('quiz')">확인 문제</button>
+</nav>
+
+<!-- 시 형식 정리 -->
+<div class="sec on" id="s-form">
+  <h2>시 형식 비교</h2>
+  <div class="row">
+    <div class="mini"><div class="mini-label">발라드 (Ballad)</div><div class="mini-val">4행 1연 · 이야기 시</div></div>
+    <div class="mini"><div class="mini-label">영웅 2행연 (Heroic Couplet)</div><div class="mini-val">2행 완결 · 초서</div></div>
+    <div class="mini"><div class="mini-label">무운시 (Blank Verse)</div><div class="mini-val">라임 없음 · 앙장망</div></div>
+  </div>
+
+  <div class="card">
+    <h3>발라드 (Ballad)</h3>
+    <p style="margin-bottom:10px">내러티브(이야기) 시의 형식. 민요에서 기원. <span style="font-weight:500;color:#111">워즈워스·콜리지</span>가 본격 문학 형식으로 처음 사용.</p>
+    <table class="tbl">
+      <tr><th>특징</th><th>내용</th></tr>
+      <tr><td class="accent">라임 패턴</td><td>abcb 또는 xbxb (1·3행은 라임 없어도 됨 → x로 표시)</td></tr>
+      <tr><td class="accent">운율 (1·3행)</td><td>Iambic Tetrameter — 약강 × 4번</td></tr>
+      <tr><td class="accent">운율 (2·4행)</td><td>Iambic Trimeter — 약강 × 3번 (tri = 3, 트라이앵글!)</td></tr>
+      <tr><td class="accent">내용 단위</td><td>4행이 하나의 완결된 덩어리</td></tr>
+    </table>
+    <div><span class="tag tp">iambic tetrameter</span><span class="tag tt">iambic trimeter</span><span class="tag ta">내러티브 시</span></div>
+  </div>
+
+  <div class="card">
+    <h3>영웅 2행연 (Heroic Couplet) — 초서 방식</h3>
+    <p style="margin-bottom:10px">초서가 영문학에 도입. "영문학(영시)의 아버지"라 불리는 이유.</p>
+    <table class="tbl">
+      <tr><th>특징</th><th>내용</th></tr>
+      <tr><td class="accent">라임 패턴</td><td>aa bb cc … (2행 끝소리가 라임)</td></tr>
+      <tr><td class="accent">운율</td><td>Iambic Pentameter — 약강 × 5번 (음절 10개)</td></tr>
+      <tr><td class="accent">내용 단위</td><td>2행이 하나의 완결된 덩어리</td></tr>
+      <tr><td class="accent">이름 이유</td><td>Iambic Pentameter + Couplet → Heroic Couplet</td></tr>
+    </table>
+    <div><span class="tag tp">iambic pentameter</span><span class="tag tc">couplet (2행연)</span><span class="tag tb">초서 도입</span></div>
+  </div>
+
+  <div class="card">
+    <h3>무운시 (Blank Verse)</h3>
+    <p style="margin-bottom:10px">낭만주의 시의 핵심 형식. 셰익스피어 드라마, 밀턴 Paradise Lost도 이 형식.</p>
+    <table class="tbl">
+      <tr><th>특징</th><th>내용</th></tr>
+      <tr><td class="accent">라임</td><td>없음 (무운 = 운이 없다)</td></tr>
+      <tr><td class="accent">운율</td><td>Iambic Pentameter 기본 (약강 × 5, 음절 10개)</td></tr>
+      <tr><td class="accent">내용 단위</td><td>없음 — 문장 단위로 완결</td></tr>
+      <tr><td class="accent">앙장망 (Enjambment)</td><td>= Run-on line: 문장이 줄 끝에서 끝나지 않고 다음 줄로 이어짐</td></tr>
+      <tr><td class="accent">사용 이유</td><td>4행·2행의 제한을 벗어나 생각을 길게 펼치기 위해</td></tr>
+    </table>
+    <div><span class="tag tp">blank verse</span><span class="tag tt">앙장망 / enjambment</span><span class="tag tc">run-on line</span><span class="tag tb">워즈워스 대표 형식</span></div>
+  </div>
+</div>
+
+<!-- 틴턴 수도원 -->
+<div class="sec" id="s-tintern">
+  <h2>Lines Composed a Few Miles above Tintern Abbey (1798)</h2>
+  <div class="row">
+    <div class="mini"><div class="mini-label">시 형식</div><div class="mini-val">Blank Verse</div></div>
+    <div class="mini"><div class="mini-label">배경</div><div class="mini-val">와이(Wye)강, 웨일스</div></div>
+    <div class="mini"><div class="mini-label">시기</div><div class="mini-val">1798년 7월 13일</div></div>
+    <div class="mini"><div class="mini-label">방문 횟수</div><div class="mini-val">두 번째 방문</div></div>
+  </div>
+
+  <div class="card">
+    <h3>파트 1 — 풍경 묘사 (1~22행)</h3>
+    <p>5년 만에 다시 찾은 와이강. 가파른 절벽, 단풍나무 아래 휴식, 과수원, 숲, 산 울타리, 연기 등 풍경 묘사.</p>
+    <ul style="margin-top:8px">
+      <li>5년을 "다섯 번의 여름·겨울"로 반복 강조 → 낭만주의 특징: 중언부언·반복</li>
+      <li>연기(smoke) = 방랑자 또는 은둔자가 있다는 불확실한 암시</li>
+      <li>산 울타리(hedge-row): 오랫동안 관리 안 해 제멋대로 자란 상태(run wild)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>파트 2 — 기억과 회복 (23~57행)</h3>
+    <p>도시의 소음 속에서도 이 풍경의 기억이 달콤한 감각(sweet sensations)을 주었고, 평온한 감정을 회복(restoration)시켜 주었다.</p>
+    <ul style="margin-top:8px">
+      <li>기억 속 풍경 → 평온한 감정 회복(tranquil restoration) → 무의식적 선행으로 이어짐</li>
+      <li>Sublime 경험: 장대함 + 위험감이 결합된 숭고한 아름다움</li>
+      <li>육체(corporeal frame)의 호흡·맥박이 거의 멈추는 순간 → 살아있는 영혼(living soul)이 해방</li>
+    </ul>
+    <div style="margin-top:8px"><span class="tag tp">Sublime (숭고미)</span><span class="tag tt">신플라톤주의</span><span class="tag ta">tranquil restoration</span></div>
+  </div>
+
+  <div class="card">
+    <h3>파트 3 — 5년 전의 나 vs. 지금의 나 (67~111행)</h3>
+    <table class="tbl">
+      <tr><th></th><th>5년 전 (젊은 나)</th><th>현재 (성숙한 나)</th></tr>
+      <tr><td class="accent">자연 인식</td><td>감각적 직접 경험 (눈·귀)</td><td>인간과 우주의 본질 파악</td></tr>
+      <tr><td class="accent">기쁨의 성격</td><td>거칠고 동물적, 폭포 같은 열정</td><td>고요하고 심오한 기쁨</td></tr>
+      <tr><td class="accent">자연과의 관계</td><td>사슴처럼 뛰어다님</td><td>조화로운 관계, 우주 본질 감지</td></tr>
+    </table>
+    <p style="margin-top:8px">결론: 감각적 기쁨은 잃었으나, 더 깊은 선물(인간·우주 이해)을 받음 → 풍부한 보상(abundant recompense)</p>
+  </div>
+
+  <div class="card">
+    <h3>파트 4 — 여동생 도로시에게 (112~159행)</h3>
+    <ul>
+      <li>Dorothy Wordsworth의 눈에서 5년 전 자신의 모습을 발견</li>
+      <li>자연을 사랑한 마음은 배신당하지 않는다 (Nature never did betray)</li>
+      <li>자연 = 영양분(nurse) + 안내자(guide) + 보호자(guardian) + 도덕적 지주</li>
+      <li>도로시도 세월이 지나면 황홀함이 성숙한 기쁨(sober pleasure)으로 변모하길 기원</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>신플라톤주의 (Neoplatonism)</h3>
+    <p>소크라테스처럼, 워즈워스도 "인간의 육체 안에 순수한 영혼이 갇혀 있다"고 생각. 절대적 아름다움·진리를 경험하려면 육체를 넘어 순수한 영혼이 해방되어야 함. 와이강 풍경이 그 해방의 계기.</p>
+  </div>
+</div>
+
+<!-- 수선화 -->
+<div class="sec" id="s-daffodil">
+  <h2>I Wandered Lonely as a Cloud (수선화)</h2>
+  <div class="row">
+    <div class="mini"><div class="mini-label">시 형식</div><div class="mini-val">iambic tetrameter</div></div>
+    <div class="mini"><div class="mini-label">연 구성</div><div class="mini-val">6행 × 4연 (총 24행)</div></div>
+    <div class="mini"><div class="mini-label">라임</div><div class="mini-val">ababcc 패턴</div></div>
+    <div class="mini"><div class="mini-label">핵심 주제</div><div class="mini-val">자연의 기억과 내면의 기쁨</div></div>
+  </div>
+
+  <div class="card">
+    <h3>각 연 내용 정리</h3>
+    <table class="tbl">
+      <tr><th>연</th><th>시제</th><th>핵심 내용</th></tr>
+      <tr><td class="accent">1연</td><td>과거</td><td>구름처럼 혼자 방랑 → 갑자기 수선화 군락 발견. 고독(lonely) → 춤(dancing)으로 감정 전환</td></tr>
+      <tr><td class="accent">2연</td><td>과거</td><td>수선화가 은하수 별처럼 끝없이 이어짐. 경쾌하고(sprightly) 활기찬 분위기</td></tr>
+      <tr><td class="accent">3연</td><td>과거</td><td>수선화가 물결보다 더 아름답게 춤춤(outdid). 기쁨 경험. 그때는 그 가치를 몰랐음(little thought)</td></tr>
+      <tr><td class="accent">4연</td><td>현재</td><td>소파에 누워 멍하거나 수심에 잠길 때, 내면의 눈(inward eye)에 수선화가 번쩍 → 마음이 기쁨으로 충만</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>1연 vs. 4연 — 감정의 변화</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+      <div style="background:#EEEDFE;border-radius:8px;padding:0.9rem 1rem">
+        <div style="font-size:12px;color:#534AB7;font-weight:500;margin-bottom:4px">1연 (과거)</div>
+        <div style="font-size:13px;color:#3C3489">Lonely · Wandered → 고독·방랑 상태</div>
+      </div>
+      <div style="background:#E1F5EE;border-radius:8px;padding:0.9rem 1rem">
+        <div style="font-size:12px;color:#0F6E56;font-weight:500;margin-bottom:4px">4연 (현재)</div>
+        <div style="font-size:13px;color:#085041">Heart fills with pleasure → 내면의 충만한 기쁨</div>
+      </div>
+    </div>
+    <p>핵심 차이: 1~3연은 과거형, 4연만 현재형. 과거의 자연 경험이 현재의 내면에 기쁨으로 살아남.</p>
+  </div>
+
+  <div class="card">
+    <h3>워즈워스 시의 핵심 감정 구조</h3>
+    <p>대부분의 워즈워스 시는 <span style="font-weight:500;color:#111">슬픔·고독 → 자연 경험 → 회복·기쁨</span>의 구조를 따름.</p>
+    <ul style="margin-top:8px">
+      <li>Lonely / Sad / Pensive → 자연과의 만남 → Sweet sensation / Joy / Tranquil restoration</li>
+      <li>"inward eye" (내면의 눈) = 상상력으로 자연을 떠올리는 능력 → 워즈워스 시학의 핵심</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 핵심 개념 -->
+<div class="sec" id="s-key">
+  <h2>핵심 개념 정리</h2>
+
+  <div class="card">
+    <h3>운율 용어 (시험 필수)</h3>
+    <table class="tbl">
+      <tr><th>용어</th><th>의미</th><th>예시</th></tr>
+      <tr><td class="accent">Iambic</td><td>약강(da-DUM) 패턴</td><td>da-DUM da-DUM da-DUM …</td></tr>
+      <tr><td class="accent">Tetrameter</td><td>4번 반복 (tetra = 4)</td><td>약강 × 4 = 음절 8개</td></tr>
+      <tr><td class="accent">Pentameter</td><td>5번 반복 (penta = 5)</td><td>약강 × 5 = 음절 10개</td></tr>
+      <tr><td class="accent">Trimeter</td><td>3번 반복 (tri = 3)</td><td>약강 × 3 = 음절 6개</td></tr>
+      <tr><td class="accent">Couplet</td><td>2행이 하나의 단위 (이행연구)</td><td>aa 라임</td></tr>
+      <tr><td class="accent">Blank Verse</td><td>무운시: 라임 없음 + iambic pentameter</td><td>틴턴 수도원</td></tr>
+      <tr><td class="accent">Enjambment (앙장망)</td><td>문장이 줄 끝에서 끝나지 않고 다음 줄로 이어짐 = Run-on line</td><td>틴턴 수도원 전체</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Sublime (숭고미) vs. Beauty (아름다움)</h3>
+    <p style="margin-bottom:10px">에드먼드 버크(Edmund Burke)가 철학에 도입한 개념.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+      <div style="background:#f5f4f0;border-radius:8px;padding:0.9rem 1rem">
+        <div style="font-size:12px;font-weight:500;color:#555;margin-bottom:4px">Beauty (아름다움)</div>
+        <div style="font-size:13px;color:#555">조화롭고 편안한 아름다움. 위험감 없음.</div>
+      </div>
+      <div style="background:#EEEDFE;border-radius:8px;padding:0.9rem 1rem">
+        <div style="font-size:12px;font-weight:500;color:#534AB7;margin-bottom:4px">Sublime (숭고)</div>
+        <div style="font-size:13px;color:#3C3489">장대함 + 위험감이 결합된 압도적 아름다움.</div>
+      </div>
+    </div>
+    <p>예: 나이아가라 폭포, 넓은 바다 — "저 안에 들어가면 죽을 수도 있겠다"는 감각과 함께 느끼는 경이로움.</p>
+  </div>
+
+  <div class="card">
+    <h3>자연(Nature)의 의미 — 워즈워스</h3>
+    <ul>
+      <li>단순한 배경이 아닌 인간의 영혼을 치유·안내하는 존재</li>
+      <li>자연 = 영양분(nurse) + 안내자(guide) + 보호자(guardian) + 도덕적 존재의 토대</li>
+      <li>자연을 사랑한 마음은 배신당하지 않는다 (Nature never did betray the heart that loved her)</li>
+      <li>눈·귀는 수동적 감각기관이 아니라 세상을 "반쯤 창조"하는 능동적 존재</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>작가 관계 정리</h3>
+    <table class="tbl">
+      <tr><th>인물</th><th>역할 / 관계</th></tr>
+      <tr><td class="accent">William Wordsworth</td><td>낭만주의 대표 시인. Lyrical Ballads (1798) 콜리지와 공동 출판</td></tr>
+      <tr><td class="accent">Dorothy Wordsworth</td><td>워즈워스의 여동생. 함께 시를 쓰고 이야기 나눔. 틴턴 수도원에서 동행</td></tr>
+      <tr><td class="accent">Geoffrey Chaucer</td><td>영문학(영시)의 아버지. Heroic Couplet 도입. Canterbury Tales 저자</td></tr>
+      <tr><td class="accent">Edmund Burke</td><td>18세기 철학자. Sublime(숭고미) 개념 도입. 보수주의자, 프랑스 대혁명 반대</td></tr>
+      <tr><td class="accent">Samuel Taylor Coleridge</td><td>워즈워스와 함께 발라드를 본격 문학 형식으로 처음 사용한 작가</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 확인 문제 -->
+<div class="sec" id="s-quiz">
+  <h2>확인 문제</h2>
+  <div id="qwrap"></div>
+  <div style="display:flex;gap:10px;align-items:center;margin-top:1rem;flex-wrap:wrap">
+    <button id="prev-btn" class="nb" onclick="prevQ()" style="display:none">이전</button>
+    <button id="next-btn" class="nb" onclick="nextQ()" style="display:none">다음 문제</button>
+    <span id="prog" style="font-size:12px;color:#888"></span>
+    <span id="score" style="font-size:12px;font-weight:500;color:#111;display:none"></span>
+  </div>
+</div>
+
+</div>
+
+<script>
+const qs=[
+  {q:"발라드(Ballad)의 2행과 4행에서 나타나는 운율 패턴은?",opts:["Iambic Pentameter","Iambic Tetrameter","Iambic Trimeter","Trochaic Tetrameter"],ans:2,fb:"발라드에서 1·3행은 Iambic Tetrameter(약강×4), 2·4행은 Iambic Trimeter(약강×3)입니다."},
+  {q:"초서(Chaucer)가 영문학에 도입한 시 형식은?",opts:["Blank Verse","Heroic Couplet","Ballad","Free Verse"],ans:1,fb:"초서는 Iambic Pentameter + Couplet = Heroic Couplet을 도입하여 '영문학(영시)의 아버지'라 불립니다."},
+  {q:"무운시(Blank Verse)에 대한 설명 중 틀린 것은?",opts:["라임(끝 운)이 없다","Iambic Pentameter가 기본 운율이다","앙장망(Enjambment)을 사용한다","4행이 하나의 완결 단위다"],ans:3,fb:"Blank Verse는 행 단위가 아닌 '문장' 단위로 내용이 완결됩니다. 4행 단위는 발라드의 특징입니다."},
+  {q:"'Lines Composed above Tintern Abbey'에서 워즈워스의 두 번째 방문 날짜는?",opts:["1793년 7월","1798년 7월 13일","1800년 6월","1802년 8월"],ans:1,fb:"제목에 '1798년 7월 13일'이 명시되어 있으며, revisiting이므로 두 번째 방문입니다."},
+  {q:"에드먼드 버크(Edmund Burke)가 도입한 개념으로, 장대함과 위험감이 결합된 압도적 아름다움은?",opts:["Beauty","Sublime","Pastoral","Romance"],ans:1,fb:"Sublime(숭고미)은 Burke가 도입한 개념으로, 나이아가라 폭포처럼 장대하면서도 위험한 감각을 동반하는 아름다움입니다."},
+  {q:"'I Wandered Lonely as a Cloud'에서 1~3연과 4연의 가장 큰 차이는?",opts:["화자가 다르다","시제가 다르다 (과거 vs. 현재)","장소가 다르다","운율 패턴이 다르다"],ans:1,fb:"1~3연은 과거시제, 4연만 현재시제입니다. 과거의 자연 경험이 inward eye를 통해 현재의 기쁨으로 재현됩니다."},
+  {q:"앙장망(Enjambment)의 다른 이름은?",opts:["Couplet","Stanza break","Run-on line","Caesura"],ans:2,fb:"앙장망(enjambment)은 영어로 'run-on line'이라고도 합니다. 문장이 시행 끝에서 끝나지 않고 다음 행으로 이어지는 것으로, Blank Verse의 핵심 특징입니다."},
+  {q:"틴턴 수도원 시에서 5년 후 현재 워즈워스에 대한 설명으로 가장 적절한 것은?",opts:["감각적 자연 경험에만 집중한다","사슴처럼 자연을 뛰어다닌다","자연을 통해 인간과 우주의 본질을 파악한다","자연 속에서 슬픔만을 느낀다"],ans:2,fb:"5년 후의 현재 워즈워스는 감각적 경험을 넘어 자연을 통해 인간의 본질, 우주의 본질을 파악할 수 있게 되었다고 묘사합니다."},
+];
+
+let cur=0,score=0,answered=[];
+function renderQ(){
+  const q=qs[cur];
+  let html=`<div style="font-size:12px;color:#aaa;margin-bottom:8px">문제 ${cur+1} / ${qs.length}</div>`;
+  html+=`<div class="quiz-q">${q.q}</div>`;
+  q.opts.forEach((o,i)=>{
+    let st='';
+    if(answered[cur]!==undefined){
+      if(i===q.ans)st='background:#EAF3DE;border-color:#3B6D11;color:#173404;';
+      else if(i===answered[cur])st='background:#FCEBEB;border-color:#A32D2D;color:#501313;';
+    }
+    html+=`<button onclick="answer(${i})" class="quiz-opt" style="${st}">${o}</button>`;
+  });
+  if(answered[cur]!==undefined){
+    const ok=answered[cur]===q.ans;
+    html+=`<div class="quiz-fb show ${ok?'correct':'wrong'}">${ok?'정답입니다! ':'오답입니다. '}${q.fb}</div>`;
+  }
+  document.getElementById('qwrap').innerHTML=html;
+  document.getElementById('prev-btn').style.display=cur>0?'inline-block':'none';
+  document.getElementById('next-btn').style.display=(answered[cur]!==undefined&&cur<qs.length-1)?'inline-block':'none';
+  document.getElementById('prog').textContent=`맞은 문제: ${score} / ${Object.keys(answered).length}`;
+  if(Object.keys(answered).length===qs.length){
+    document.getElementById('score').style.display='inline';
+    document.getElementById('score').textContent=`최종 점수: ${score}/${qs.length}`;
+  }
+}
+function answer(i){
+  if(answered[cur]!==undefined)return;
+  answered[cur]=i;
+  if(i===qs[cur].ans)score++;
+  renderQ();
+}
+function nextQ(){cur++;renderQ();}
+function prevQ(){cur--;renderQ();}
+function show(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('s-'+id).classList.add('on');
+  event.target.classList.add('on');
+  if(id==='quiz')renderQ();
+}
+</script>
+</body>
+</html>

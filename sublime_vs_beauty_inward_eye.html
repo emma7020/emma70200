@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sublime vs Beauty & Inward Eye</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f9f8f6; color: #1a1a1a; line-height: 1.7; }
+.wrap { max-width: 740px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.nav { display: flex; gap: 6px; flex-wrap: wrap; padding: 1rem 0 1.25rem; border-bottom: 0.5px solid #dedad3; margin-bottom: 1.5rem; }
+.nb { padding: 6px 14px; font-size: 13px; border: 0.5px solid #ccc; border-radius: 20px; background: transparent; color: #666; cursor: pointer; transition: all .15s; font-family: inherit; }
+.nb:hover { background: #f0eeea; color: #222; }
+.nb.on { background: #f0eeea; color: #111; border-color: #999; font-weight: 500; }
+.sec { display: none; } .sec.on { display: block; }
+.card { background: #fff; border: 0.5px solid #e5e2db; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+.tag { display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 20px; margin: 2px 3px 2px 0; }
+.tp { background: #EEEDFE; color: #3C3489; }
+.tt { background: #E1F5EE; color: #085041; }
+.ta { background: #FAEEDA; color: #633806; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 1rem; }
+.col-purple { background: #EEEDFE; border-radius: 12px; padding: 1rem 1.1rem; }
+.col-teal { background: #E1F5EE; border-radius: 12px; padding: 1rem 1.1rem; }
+.col-purple h3 { color: #3C3489; } .col-teal h3 { color: #085041; }
+.col-purple p, .col-purple li { color: #534AB7; } .col-teal p, .col-teal li { color: #0F6E56; }
+.col-purple ul, .col-teal ul { padding-left: 18px; margin-top: 8px; }
+.ex-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-top: 10px; }
+.ex-box { border-radius: 8px; padding: 10px 12px; font-size: 13px; color: #555; line-height: 1.6; }
+.ex-s { background: #EEEDFE; color: #3C3489; }
+.ex-b { background: #f5f4f0; color: #666; }
+.ex-label { font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 4px; opacity: .7; }
+.note { border-left: 2px solid #AFA9EC; padding: 8px 12px; background: #faf9ff; margin-top: 8px; }
+.note.teal { border-color: #5DCAA5; background: #f5fdf9; }
+.note p { font-size: 12px; color: #666; line-height: 1.7; }
+.note strong { color: #534AB7; }
+.note.teal strong { color: #0F6E56; }
+.quote { font-family: Georgia, 'Times New Roman', serif; font-size: 13px; color: #534AB7; background: #EEEDFE; border-radius: 8px; padding: 10px 14px; margin: 10px 0; line-height: 1.9; }
+.quote.teal { color: #085041; background: #E1F5EE; }
+h2 { font-size: 17px; font-weight: 500; color: #111; margin-bottom: 1rem; }
+h3 { font-size: 14px; font-weight: 500; color: #111; margin-bottom: 6px; }
+p, li { font-size: 13px; color: #555; line-height: 1.75; }
+ul { padding-left: 18px; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div style="padding:.4rem 0 0">
+  <div style="font-size:11px;color:#aaa;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px">워즈워스 핵심 개념</div>
+  <div style="font-size:22px;font-weight:500;color:#111;margin-bottom:2px">Sublime vs Beauty &amp; Inward Eye</div>
+  <div style="font-size:13px;color:#888">교수님 강조 개념 집중 정리</div>
+</div>
+
+<nav class="nav">
+  <button class="nb on" onclick="show('sv')">Sublime vs Beauty</button>
+  <button class="nb" onclick="show('ie')">Inward Eye</button>
+</nav>
+
+<!-- Sublime vs Beauty -->
+<div class="sec on" id="s-sv">
+
+  <div class="row">
+    <div class="col-teal">
+      <h3>Beauty (아름다움)</h3>
+      <p>조화롭고 균형 잡힌 아름다움.<br>편안하고 기분 좋은 감각.</p>
+      <ul>
+        <li>위험감 없음</li>
+        <li>잔잔하고 정돈된 느낌</li>
+        <li>예쁜 꽃밭, 잔잔한 호수</li>
+      </ul>
+    </div>
+    <div class="col-purple">
+      <h3>Sublime (숭고미)</h3>
+      <p>장대함 + 위험감이<br>결합된 압도적 아름다움.</p>
+      <ul>
+        <li>경외감 + 두려움 동시에</li>
+        <li>압도되는 거대한 스케일</li>
+        <li>폭포, 폭풍, 넓은 대양</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>누가 만든 개념인가?</h3>
+    <p style="margin-top:6px"><span style="font-weight:500;color:#111">에드먼드 버크 (Edmund Burke)</span> — 18세기 철학자. 보수주의자로 프랑스 대혁명을 반대한 사람이지만, 철학사에서 <span style="font-weight:500;color:#111">Sublime이라는 개념을 처음 도입</span>한 것으로 유명. 그 전까지는 Beauty 개념만 존재했음.</p>
+  </div>
+
+  <div class="card">
+    <h3>Sublime을 느끼는 순간 — 교수님 예시</h3>
+    <div class="ex-grid">
+      <div class="ex-box ex-s">
+        <div class="ex-label">나이아가라 폭포</div>
+        엄청난 물이 쏟아지는 장대함 + "저 안에 들어가면 죽겠다"는 위험감
+      </div>
+      <div class="ex-box ex-s">
+        <div class="ex-label">넓은 바다</div>
+        끝없이 펼쳐진 장대함 + 빠져 죽을 수도 있다는 두려움
+      </div>
+      <div class="ex-box ex-b">
+        <div class="ex-label">Beauty만 있는 것</div>
+        예쁜 정원, 잔잔한 꽃밭 → 위험감 없음 → Sublime 아님
+      </div>
+    </div>
+    <div class="note" style="margin-top:12px">
+      <p><strong>교수님 포인트:</strong> 워즈워스의 와이강은 사실 조그만 강이라 장대하지 않지만, 워즈워스는 그 풍경에서 Sublime을 느꼈다고 묘사함. 중요한 건 객관적 크기가 아니라 <strong>시인이 느끼는 주관적 경험</strong>.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>틴턴 수도원에서 Sublime은 어디 나오나?</h3>
+    <div class="quote">"a sense sublime / Of something far more deeply interfused, / Whose dwelling is the light of setting suns, / And the round ocean and the living air..."</div>
+    <p>석양빛, 넓은 바다, 살아 숨 쉬는 대기 — 이 모든 것 속에 깃든 어떤 존재에서 숭고한 감각을 느낀다. 단순한 아름다움(Beauty)을 넘어선 압도적이고 신비로운 경험.</p>
+    <div class="note" style="margin-top:10px">
+      <p><strong>흐름 정리:</strong> 자연의 기억 → sweet sensations → blessed mood → <strong>sense sublime</strong> → living soul(영혼의 해방) → life of things(우주의 본질을 봄)</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Inward Eye -->
+<div class="sec" id="s-ie">
+
+  <div class="card">
+    <h3>Inward Eye (내면의 눈)란?</h3>
+    <p style="margin-top:6px">눈으로 직접 보는 것이 아니라, <span style="font-weight:500;color:#111">기억 속에 저장된 자연의 모습을 마음속으로 떠올리는 능력</span>. 쉽게 말하면 <span style="font-weight:500;color:#111">"상상력"</span>이지만, 워즈워스에게는 단순한 상상을 넘어 기쁨과 치유를 가져다주는 특별한 능력.</p>
+    <div style="margin-top:10px">
+      <span class="tag tp">imagination</span>
+      <span class="tag tt">memory</span>
+      <span class="tag ta">워즈워스 시학의 핵심</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>수선화 4연 — 직접 등장하는 장면</h3>
+    <div class="quote teal">"They flash upon that inward eye<br>Which is the bliss of solitude;<br>And then my heart with pleasure fills,<br>And dances with the daffodils."</div>
+    <p>수선화를 보러 간 것도 아니고, 밖에 나간 것도 아니다. 소파에 그냥 누워 멍하거나 수심에 잠겨 있을 때 — 수선화가 내면의 눈 위에 번쩍 떠오르고, 그 순간 마음이 기쁨으로 충만해진다.</p>
+    <div class="note teal" style="margin-top:10px">
+      <p><strong>교수님 포인트:</strong> 1~3연에서 수선화를 직접 눈으로 봤던 것(외부 경험)이, 4연에서는 inward eye를 통해 내면의 기쁨으로 재현된다. 자연 경험이 내면에 저장되고, 필요할 때 꺼내 쓸 수 있다는 것 → <strong>워즈워스 시학 전체의 핵심 개념</strong>.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>틴턴 수도원에서도 같은 원리</h3>
+    <p style="margin-top:4px">5년 전 와이강을 직접 봤던 경험이 → 도시의 빈 방에서 기억으로 떠오르며 → sweet sensations와 tranquil restoration을 가져다줌.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
+      <div style="background:#EEEDFE;border-radius:8px;padding:10px 12px">
+        <div style="font-size:11px;font-weight:500;color:#534AB7;margin-bottom:4px">직접 보는 눈 (외부)</div>
+        <div style="font-size:13px;color:#3C3489">와이강을 눈으로 직접 봄 → 감각적 경험</div>
+      </div>
+      <div style="background:#E1F5EE;border-radius:8px;padding:10px 12px">
+        <div style="font-size:11px;font-weight:500;color:#0F6E56;margin-bottom:4px">Inward Eye (내면)</div>
+        <div style="font-size:13px;color:#085041">도시에서 그 풍경을 떠올림 → 치유와 기쁨</div>
+      </div>
+    </div>
+    <div class="note teal" style="margin-top:10px">
+      <p><strong>중요:</strong> 워즈워스에게 자연 경험은 그 순간만으로 끝나지 않는다. 기억 속에 저장되어 inward eye를 통해 언제든 다시 꺼낼 수 있는 <strong>"삶의 양식(food for future years)"</strong>이 된다.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>눈·귀는 수동적 감각기관이 아니다</h3>
+    <p style="margin-top:4px">교수님이 짚어주신 틴턴 수도원 105~106행:</p>
+    <div class="quote teal" style="margin:8px 0">"of eye, and ear — both what they half create, and what perceive"</div>
+    <p>눈과 귀는 세상을 그냥 받아들이는 것이 아니라, <span style="font-weight:500;color:#111">세상을 "반쯤 창조"하는 능동적 존재</span>. Inward eye도 이 연장선 — 단순 기억 재생이 아니라 능동적으로 의미를 만들어내는 행위.</p>
+  </div>
+
+</div>
+
+</div>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b => b.classList.remove('on'));
+  document.getElementById('s-' + id).classList.add('on');
+  event.target.classList.add('on');
+}
+</script>
+</body>
+</html>
